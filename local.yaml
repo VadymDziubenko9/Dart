@@ -1,0 +1,7 @@
+driverPath: /home/adminadmin/driver/chromedriver
+
+headless: false
+
+maxWaitMillis: 4000
+
+ignoreSetup: false
