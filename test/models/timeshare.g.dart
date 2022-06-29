@@ -22,7 +22,7 @@ class _$Timeshare extends Timeshare {
   @override
   final String? bathrooms;
   @override
-  final String view;
+  final String? view;
   @override
   final String? netPrice;
   @override
@@ -44,7 +44,7 @@ class _$Timeshare extends Timeshare {
       this.endDate,
       this.bedrooms,
       this.bathrooms,
-      required this.view,
+        this.view,
       this.netPrice,
       this.salePrice,
       this.reedWeekId,
@@ -53,7 +53,6 @@ class _$Timeshare extends Timeshare {
       : super._() {
     BuiltValueNullFieldError.checkNotNull(owner, 'Timeshare', 'owner');
     BuiltValueNullFieldError.checkNotNull(property, 'Timeshare', 'property');
-    BuiltValueNullFieldError.checkNotNull(view, 'Timeshare', 'view');
   }
 
   @override
@@ -224,8 +223,7 @@ class TimeshareBuilder implements Builder<Timeshare, TimeshareBuilder> {
               endDate: endDate,
               bedrooms: bedrooms,
               bathrooms: bathrooms,
-              view: BuiltValueNullFieldError.checkNotNull(
-                  view, 'Timeshare', 'view'),
+              view: view,
               netPrice: netPrice,
               salePrice: salePrice,
               reedWeekId: reedWeekId,

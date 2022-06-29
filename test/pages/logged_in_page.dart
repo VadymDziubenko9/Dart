@@ -52,7 +52,7 @@ class LoggedInPage extends Automation {
     waitUntilVisibleByXpath("//a[contains(@class,'Mui-selected ') and .//span[text()='$item']]");
   }
 
-  bool userContextMenuItemVisible(String item) {
+  bool filterBarMenuItemVisible(String item) {
     return isVisibleByXpath("//ul[@role='menu']/*[text()='$item']");
   }
 

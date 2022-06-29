@@ -3,8 +3,8 @@ import 'package:test/test.dart' hide test;
 import 'package:test/scaffolding.dart';
 import 'models/dash_portal_user.dart';
 // import 'models/dash_portal_user_list_item.dart';
-// import 'models/timeshare.dart';
 import 'models/payroll_list.dart';
+// import 'models/timeshare.dart';
 import 'pages/check_in_calendar_page.dart';
 import 'pages/dash_list_page.dart';
 // import 'pages/logged_in_page.dart';
@@ -18,6 +18,7 @@ import 'pages/payroll_page.dart';
 import 'pages/profile_page.dart' as dash_profile_page;
 import 'pages/properties_page.dart';
 import 'pages/system_notification_page.dart';
+import 'pages/timeshare_page.dart';
 import 'test_sugar.dart';
 import 'pages/messages_list_page.dart';
 
@@ -59,13 +60,9 @@ void main() async {
       var dashListView = DashListPage();
 
       when('he expands the user context menu');
-      dashListView.expandUserContextMenu();
-
       then('correct items should be shown there');
       expect(dashListView.userContextMenuItemVisible('Profile'), isTrue);
       expect(dashListView.userContextMenuItemVisible('Logout'), isTrue);
-
-      dashListView.collapseUserContextMenu();
     },
   );
 
@@ -232,21 +229,32 @@ void main() async {
     },
   );
 
-  // test(
-  //   'Admin should be able to open an existing timeshare',
-  //       () {
-  //     given('admin is on the timeshare list page');
-  //     var caseLisPage = DashListPage();
-  //     and('an existing timeshare for this client');
-  //     var timeshare = Timeshare.hardCodeTimeshare;
-  //
-  //     when('he clicks on the timeshare title');
-  //     then('all info of target timeshare should be shown');
-  //     expect(() => caseLisPage.openCase(ClientCase.fromCase(caze), detailsSet: true), returnsNormally);
-  //   },
-  // );
+  test(
+    'Admin should be able to open the `Timeshares` view',
+        () {
+      given('admin is on the `Timeshares` view');
+      var timeshareView = TimesharePage();
 
+      when('he selects the `Timeshares` item in the side panel menu');
+      timeshareView.selectMainMenuItem('Timeshares');
 
+      then('the `Timeshares` view should open');
+      expect(timeshareView.waitTillPageLoaded, returnsNormally);
+
+      and('Timeshares should be listed there');
+      expect(timeshareView.parseItems(), isNotEmpty);
+
+      and('Timeshares filter bar should be displaying there');
+      expect(timeshareView.filterBarMenuItemVisible('Verified'), isTrue);
+      expect(timeshareView.filterBarMenuItemVisible('Statuses'), isTrue);
+      expect(timeshareView.filterBarMenuItemVisible('Start date'), isTrue);
+      expect(timeshareView.filterBarMenuItemVisible('End date'), isTrue);
+      expect(timeshareView.filterBarMenuItemVisible('Property'), isTrue);
+      expect(timeshareView.filterBarMenuItemVisible('Region'), isTrue);
+      expect(timeshareView.filterBarMenuItemVisible('Country'), isTrue);
+
+    },
+  );
 
   tearDownAll(() {
     Automation.driver.quit();

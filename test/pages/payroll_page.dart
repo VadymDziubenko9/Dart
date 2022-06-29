@@ -102,6 +102,7 @@ class PayrollPage extends LoggedInPage {
     if(isVisibleByXpath("//div[contains(@class,'MuiBox-root') and ./p[text()='Payroll']]")){
       clickOnXpath("//div[@id='panel1a-header']/div[contains(@class,'MuiAccordionSummary-contentGutters')]");
       waitUntilVisibleByXpath("//div[@id='panel1a-header']/div[contains(@class,'Mui-expanded')][1]");
+      sleep(Duration(seconds: 2));
     }
     return Automation.driver.findElements(By.xpath("//div[@id='panel1a-content']//div[contains(@class,'MuiCard-root')]")).map((item) {
       scrollIntoView(item);

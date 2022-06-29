@@ -35,16 +35,6 @@ class DashListPage extends LoggedInPage{
     waitUntilVisibleByXpath("//ul/a[contains(text(), 'Case details')]");
   }
 
-  void selectCaseDetailsContextMenuItem() {
-    clickOnXpath("//ul/a[contains(text(), 'Case details')]");
-    waitUntilVisibleByXpath("//form/h6[text()='Claimant']");
-  }
-
-  void openSetDetailsView(String caseTitle) {
-    expandTimeshare(caseTitle);
-    selectCaseDetailsContextMenuItem();
-    sleep(Duration(seconds: 1));
-  }
 
   void openCasesTab(String tabName) {
     clickOnXpath("//div[contains(@class, 'MuiTabs')]/button[span[text()='$tabName']]");
@@ -127,6 +117,20 @@ class DashListPage extends LoggedInPage{
       );
     }).toList();
     scrollToTop();
+    return result;
+  }
+
+  @override
+  void expandUserContextMenu() {
+    clickOnXpath("//header//div[contains(@class, 'MuiBox-root') and .//*[contains(@class,'MuiSvgIcon-root')]]");
+    waitUntilVisibleByXpath("//ul[@role='menu']");
+    sleep(Duration(milliseconds: 600));
+  }
+
+  bool userContextMenuItemVisible(String item) {
+    expandUserContextMenu();
+    var result = isVisibleByXpath("//ul[@role='menu']/*[text()='$item']");
+    collapseUserContextMenu();
     return result;
   }
   
