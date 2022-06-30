@@ -82,15 +82,7 @@ class DashListPage extends LoggedInPage{
       scrollIntoView(item);
       var role = item.findElement(By.xpath(".//div[contains(@class,'MuiGrid-grid-md-3')][1]//p[1]")).text;
       var name = item.findElement(By.xpath(".//div[contains(@class,'MuiGrid-grid-md-3')][1]//p[2]")).text;
-      var phoneNumber = item.findElement(By.xpath(".//div[contains(@class,'MuiGrid-grid-md-3')][2]//p[1]"))
-          .text
-          .replaceFirst('+', '')
-          .replaceFirst('(', '')
-          .replaceFirst(')', '')
-          .replaceFirst('-', '')
-          .replaceFirst(' ', '')
-          .replaceFirst(' ', '')
-          .trim();
+      var phoneNumber = item.findElement(By.xpath(".//div[contains(@class,'MuiGrid-grid-md-3')][2]//p[1]")).text;
       var email = item.findElement(By.xpath(".//div[contains(@class,'MuiGrid-grid-md-3')][3]//p[1]")).text;
       var emailNotificationsEnabled = findOptionalChild(
           item, By.xpath(

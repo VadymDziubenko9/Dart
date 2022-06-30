@@ -6,12 +6,12 @@ import '../automation.dart';
 import '../models/dash_portal_user_list_item.dart';
 import 'logged_in_page.dart';
 
-class OwnersPage extends LoggedInPage {
-  static final String pageURL = 'https://admin-qa.dashweek.com/admin/owners';
+class GuestsPage extends LoggedInPage {
+  static final String pageURL = 'https://admin-qa.dashweek.com/admin/guests';
 
-  static OwnersPage open() {
+  static GuestsPage open() {
     Automation.driver.get(pageURL);
-    var page = OwnersPage();
+    var page = GuestsPage();
     page.waitTillPageLoaded();
     return page;
   }
@@ -19,7 +19,7 @@ class OwnersPage extends LoggedInPage {
   @override
   void waitTillPageLoaded() {
     super.waitTillPageLoaded();
-    var maybeListShown = Automation.Try(() => waitUntilVisibleByXpath("//div[@id='content']//p[text()='Owners']"));
+    var maybeListShown = Automation.Try(() => waitUntilVisibleByXpath("//div[@id='content']//p[text()='Guests']"));
     if (maybeListShown is Failure) {
       waitUntilVisibleByXpath("//*[@alt='No Data']");
     }
@@ -38,6 +38,7 @@ class OwnersPage extends LoggedInPage {
       scrollIntoView(item);
       var name = item.findElement(By.xpath(".//div[contains(@class,'MuiGrid-grid-md-3')][1]//p[2]")).text;
       var email = item.findElement(By.xpath(".//div[contains(@class,'MuiGrid-grid-md-3')][3]//p[1]")).text;
+      var phoneNumber = item.findElement(By.xpath(".//div[contains(@class,'MuiGrid-grid-md-3')][2]//p[1]")).text;
       var emailNotificationsEnabled = findOptionalChild(
           item, By.xpath(
           ".//div[@aria-label='Email notifications enabled']")) ==
@@ -55,6 +56,7 @@ class OwnersPage extends LoggedInPage {
               (b) => b
             ..email = email
             ..name = name
+            ..phoneNumber = phoneNumber
             ..smsNotification = smsNotificationsEnabled
             ..emailNotification = emailNotificationsEnabled
 

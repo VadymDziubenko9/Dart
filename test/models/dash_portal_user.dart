@@ -2,7 +2,6 @@ import 'package:built_value/built_value.dart';
 
 import 'dash_portal_user_list_item.dart';
 
-
 part 'dash_portal_user.g.dart';
 
 abstract class DashPortalUser
@@ -26,49 +25,69 @@ abstract class DashPortalUser
   DashPortalUser._();
 
   factory DashPortalUser([void Function(DashPortalUserBuilder) f]) =
-  _$ClientPortalUser;
-
+      _$ClientPortalUser;
 
   static final vadymDashweekAdmin = DashPortalUser(
-        (b) => b
+    (b) => b
       ..role = 'Admin'
       ..firstName = 'Vadym'
       ..lastName = 'Dziubenko'
       ..email = 'vadymdziubenko99@gmail.com'
       ..password = 'Ps@!2009'
-      ..phone = '380639979779'
+      ..phone = '+38 (063) 997-9779'
       ..smsNotification = true
       ..emailNotification = true,
   );
 
   static final vadymDashweekOwner = DashPortalUser(
-        (b) => b
+    (b) => b
       ..role = 'Owner'
       ..firstName = 'Vadym'
       ..lastName = 'Dziubenko'
       ..email = 'vadymdziubenko99+zack@gmail.com'
       ..password = 'Ps@!2009'
-      ..phone = '380639979779'
+      ..phone = '+38 (063) 997-9779'
+      ..smsNotification = true
+      ..emailNotification = true,
+  );
+
+  static final vadymDashweekGuest = DashPortalUser(
+    (b) => b
+      ..role = 'Guest'
+      ..firstName = 'QA'
+      ..lastName = 'Guest'
+      ..email = 'vadymdziubenko99+dash@gmail.com'
+      ..password = 'Ps@!2009'
+      ..phone = '+38 (063) 997-9779'
       ..smsNotification = true
       ..emailNotification = true,
   );
 
   DashPortalUserListItem toListAdmins() => DashPortalUserListItem(
         (b) => b
-      ..role = role
-      ..name = firstName.padRight(6,' ') + lastName
-      ..email = email
-      ..phoneNumber = phone
-      ..smsNotification = smsNotification
-      ..emailNotification = emailNotification,
-  );
+          ..role = role
+          ..name = firstName.padRight(6, ' ') + lastName
+          ..email = email
+          ..phoneNumber = phone
+          ..smsNotification = smsNotification
+          ..emailNotification = emailNotification,
+      );
 
   DashPortalUserListItem toListOwners() => DashPortalUserListItem(
         (b) => b
-      ..name = firstName.padRight(6,' ') + lastName
-      ..email = email
-      ..smsNotification = smsNotification
-      ..emailNotification = emailNotification,
-  );
-  
+          ..name = firstName.padRight(6, ' ') + lastName
+          ..email = email
+          ..phoneNumber = phone
+          ..smsNotification = smsNotification
+          ..emailNotification = emailNotification,
+      );
+
+  DashPortalUserListItem toListGuests() => DashPortalUserListItem(
+        (b) => b
+          ..name = firstName.padRight(3, ' ') + lastName
+          ..email = email
+          ..phoneNumber = phone
+          ..smsNotification = smsNotification
+          ..emailNotification = emailNotification,
+      );
 }

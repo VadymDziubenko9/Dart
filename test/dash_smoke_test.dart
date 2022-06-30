@@ -2,21 +2,21 @@ import 'package:test/test.dart' hide test;
 
 import 'package:test/scaffolding.dart';
 import 'models/dash_portal_user.dart';
-// import 'models/dash_portal_user_list_item.dart';
 import 'models/payroll_list.dart';
-// import 'models/timeshare.dart';
 import 'pages/check_in_calendar_page.dart';
 import 'pages/dash_list_page.dart';
-// import 'pages/logged_in_page.dart';
 import 'pages/destination_types_page.dart';
 import 'pages/expenses_page.dart';
+import 'pages/guests_page.dart';
 import 'pages/helpDesk_page.dart';
 import 'pages/login_page.dart' as dash_login_page;
 import 'automation.dart';
-import 'pages/owner_page.dart';
+import 'pages/owners_page.dart';
 import 'pages/payroll_page.dart';
 import 'pages/profile_page.dart' as dash_profile_page;
 import 'pages/properties_page.dart';
+import 'pages/reservation_requests_page.dart';
+import 'pages/reservations_page.dart';
 import 'pages/system_notification_page.dart';
 import 'pages/timeshare_page.dart';
 import 'test_sugar.dart';
@@ -193,7 +193,7 @@ void main() async {
       expect(ownersView.waitTillPageLoaded, returnsNormally);
 
       and('owner`s should be included and found by his first name');
-      ownersView.searchUser(DashPortalUser.vadymDashweekAdmin.firstName);
+      ownersView.searchUser(DashPortalUser.vadymDashweekOwner.firstName);
       expect(ownersView.parseUsers(), contains(DashPortalUser.vadymDashweekOwner.toListOwners()));
     },
   );
@@ -252,7 +252,72 @@ void main() async {
       expect(timeshareView.filterBarMenuItemVisible('Property'), isTrue);
       expect(timeshareView.filterBarMenuItemVisible('Region'), isTrue);
       expect(timeshareView.filterBarMenuItemVisible('Country'), isTrue);
+    },
+  );
 
+  test(
+    'Admin should be able to open the `Guests` view',
+    () {
+      given('admin is on the `Guests` view');
+      var guestsView = GuestsPage();
+
+      when('he selects the `Guests` item in the side panel menu');
+      guestsView.selectMainMenuItem('Guests');
+
+      then('the `Guests` view should open');
+      expect(guestsView.waitTillPageLoaded, returnsNormally);
+
+      and('guest should be included and found by his last name');
+      guestsView.searchUser(DashPortalUser.vadymDashweekGuest.lastName);
+      expect(guestsView.parseUsers(), contains(DashPortalUser.vadymDashweekGuest.toListGuests()));
+    },
+  );
+
+  test(
+    'Admin should be able to open the `Reservation Requests` view',
+    () {
+      given('admin is on the `Reservation Requests` view');
+      var reservationRequestView = ReservationRequestsPage();
+
+      when('he selects the `Reservation Requests` item in the side panel menu');
+      reservationRequestView.selectMainMenuItem('Reservation Requests');
+
+      then('the `Reservation Requests` view should open');
+      expect(reservationRequestView.waitTillPageLoaded, returnsNormally);
+
+      and('Reservation Requests should be listed there');
+      expect(reservationRequestView.parseItems(), isNotEmpty);
+
+      and('Reservation Requests filter bar should be displaying there');
+      expect(reservationRequestView.filterBarMenuItemVisible('Guest'), isTrue);
+      expect(reservationRequestView.filterBarMenuItemVisible('Agent'), isTrue);
+      expect(reservationRequestView.filterBarMenuItemVisible('Statuses'), isTrue);
+    },
+  );
+
+  test(
+    'Admin should be able to open the `Reservations` view',
+    () {
+      given('admin is on the `Reservations` view');
+      var reservationsView = ReservationsPage();
+
+      when('he selects the `Reservations` item in the side panel menu');
+      reservationsView.selectMainMenuItem('Reservations');
+
+      then('the `Reservations` view should open');
+      expect(reservationsView.waitTillPageLoaded, returnsNormally);
+
+      and('Reservations should be listed there');
+      expect(reservationsView.parseItems(), isNotEmpty);
+
+      and('Reservations filter bar should be displaying there');
+      expect(reservationsView.filterBarMenuItemVisible('Statuses'), isTrue);
+      expect(reservationsView.filterBarMenuItemVisible('Start date'), isTrue);
+      expect(reservationsView.filterBarMenuItemVisible('End date'), isTrue);
+      expect(reservationsView.filterBarMenuItemVisible('Agent'), isTrue);
+      expect(reservationsView.filterBarMenuItemVisible('Guest'), isTrue);
+      expect(reservationsView.filterBarMenuItemVisible('Owner'), isTrue);
+      expect(reservationsView.filterBarMenuItemVisible('Property'), isTrue);
     },
   );
 
