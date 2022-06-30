@@ -1,0 +1,7 @@
+targets:
+  qa:
+    builders:
+      built_value_generator|built_value:
+        generate_for:
+          include:
+            - test/models/**.dart

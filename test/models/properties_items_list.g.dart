@@ -20,7 +20,7 @@ class _$PropertyItemsList extends PropertyItemsList {
 
   factory _$PropertyItemsList(
           [void Function(PropertyItemsListBuilder)? updates]) =>
-      (new PropertyItemsListBuilder()..update(updates)).build();
+      (new PropertyItemsListBuilder()..update(updates))._build();
 
   _$PropertyItemsList._(
       {required this.property,
@@ -30,20 +30,19 @@ class _$PropertyItemsList extends PropertyItemsList {
       required this.agents})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        property, 'PropertyItemsList', 'property');
+        property, r'PropertyItemsList', 'property');
     BuiltValueNullFieldError.checkNotNull(
-        destination, 'PropertyItemsList', 'destination');
+        destination, r'PropertyItemsList', 'destination');
     BuiltValueNullFieldError.checkNotNull(
-        country, 'PropertyItemsList', 'country');
+        country, r'PropertyItemsList', 'country');
     BuiltValueNullFieldError.checkNotNull(
-        region, 'PropertyItemsList', 'region');
+        region, r'PropertyItemsList', 'region');
     BuiltValueNullFieldError.checkNotNull(
-        agents, 'PropertyItemsList', 'agents');
+        agents, r'PropertyItemsList', 'agents');
   }
 
   @override
-  PropertyItemsList rebuild(
-          void Function(PropertyItemsListBuilder) updates) =>
+  PropertyItemsList rebuild(void Function(PropertyItemsListBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
@@ -73,7 +72,7 @@ class _$PropertyItemsList extends PropertyItemsList {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('PayrollReservationList')
+    return (newBuiltValueToStringHelper(r'PropertyItemsList')
           ..add('property', property)
           ..add('destination', destination)
           ..add('country', country)
@@ -106,7 +105,7 @@ class PropertyItemsListBuilder
   String? _agents;
   String? get agents => _$this._agents;
   set agents(String? agents) => _$this._agents = agents;
-  
+
   PropertyItemsListBuilder();
 
   PropertyItemsListBuilder get _$this {
@@ -134,22 +133,24 @@ class PropertyItemsListBuilder
   }
 
   @override
-  _$PropertyItemsList build() {
+  PropertyItemsList build() => _build();
+
+  _$PropertyItemsList _build() {
     final _$result = _$v ??
         new _$PropertyItemsList._(
             property: BuiltValueNullFieldError.checkNotNull(
-                property, 'BillingInvoice', 'property'),
+                property, r'PropertyItemsList', 'property'),
             destination: BuiltValueNullFieldError.checkNotNull(
-                destination, 'BillingInvoice', 'destination'),
+                destination, r'PropertyItemsList', 'destination'),
             country: BuiltValueNullFieldError.checkNotNull(
-                country, 'BillingInvoice', 'country'),
+                country, r'PropertyItemsList', 'country'),
             region: BuiltValueNullFieldError.checkNotNull(
-                region, 'BillingInvoice', 'region'),
+                region, r'PropertyItemsList', 'region'),
             agents: BuiltValueNullFieldError.checkNotNull(
-                agents, 'BillingInvoice', 'guestRate'));
+                agents, r'PropertyItemsList', 'agents'));
     replace(_$result);
     return _$result;
   }
 }
 
-// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas

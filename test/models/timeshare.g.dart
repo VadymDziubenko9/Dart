@@ -1,12 +1,10 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-
-// **************************************************************************
+part of 'timeshare.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
-
-part of 'timeshare.dart';
+// **************************************************************************
 
 class _$Timeshare extends Timeshare {
   @override
@@ -35,7 +33,7 @@ class _$Timeshare extends Timeshare {
   final String? notes;
 
   factory _$Timeshare([void Function(TimeshareBuilder)? updates]) =>
-      (new TimeshareBuilder()..update(updates)).build();
+      (new TimeshareBuilder()..update(updates))._build();
 
   _$Timeshare._(
       {required this.owner,
@@ -44,15 +42,15 @@ class _$Timeshare extends Timeshare {
       this.endDate,
       this.bedrooms,
       this.bathrooms,
-        this.view,
+      this.view,
       this.netPrice,
       this.salePrice,
       this.reedWeekId,
       this.expirationDate,
       this.notes})
       : super._() {
-    BuiltValueNullFieldError.checkNotNull(owner, 'Timeshare', 'owner');
-    BuiltValueNullFieldError.checkNotNull(property, 'Timeshare', 'property');
+    BuiltValueNullFieldError.checkNotNull(owner, r'Timeshare', 'owner');
+    BuiltValueNullFieldError.checkNotNull(property, r'Timeshare', 'property');
   }
 
   @override
@@ -108,7 +106,7 @@ class _$Timeshare extends Timeshare {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('Timeshare')
+    return (newBuiltValueToStringHelper(r'Timeshare')
           ..add('owner', owner)
           ..add('property', property)
           ..add('startDate', startDate)
@@ -170,12 +168,12 @@ class TimeshareBuilder implements Builder<Timeshare, TimeshareBuilder> {
 
   DateTime? _expirationDate;
   DateTime? get expirationDate => _$this._expirationDate;
-  set expirationDate(DateTime? expirationDate) => _$this._expirationDate = expirationDate;
+  set expirationDate(DateTime? expirationDate) =>
+      _$this._expirationDate = expirationDate;
 
   String? _notes;
   String? get notes => _$this._notes;
   set notes(String? notes) => _$this._notes = notes;
-
 
   TimeshareBuilder();
 
@@ -211,27 +209,28 @@ class TimeshareBuilder implements Builder<Timeshare, TimeshareBuilder> {
   }
 
   @override
-  _$Timeshare build() {
-    _$Timeshare _$result;
-      _$result = _$v ??
-          new _$Timeshare._(
-              owner: BuiltValueNullFieldError.checkNotNull(
-                  owner, 'Timeshare', 'owner'),
-              property: BuiltValueNullFieldError.checkNotNull(
-                  property, 'Timeshare', 'property'),
-              startDate: startDate,
-              endDate: endDate,
-              bedrooms: bedrooms,
-              bathrooms: bathrooms,
-              view: view,
-              netPrice: netPrice,
-              salePrice: salePrice,
-              reedWeekId: reedWeekId,
-              expirationDate: expirationDate,
-              notes: notes);
+  Timeshare build() => _build();
+
+  _$Timeshare _build() {
+    final _$result = _$v ??
+        new _$Timeshare._(
+            owner: BuiltValueNullFieldError.checkNotNull(
+                owner, r'Timeshare', 'owner'),
+            property: BuiltValueNullFieldError.checkNotNull(
+                property, r'Timeshare', 'property'),
+            startDate: startDate,
+            endDate: endDate,
+            bedrooms: bedrooms,
+            bathrooms: bathrooms,
+            view: view,
+            netPrice: netPrice,
+            salePrice: salePrice,
+            reedWeekId: reedWeekId,
+            expirationDate: expirationDate,
+            notes: notes);
     replace(_$result);
     return _$result;
   }
 }
 
-// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas

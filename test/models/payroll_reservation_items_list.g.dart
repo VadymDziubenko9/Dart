@@ -24,7 +24,7 @@ class _$PayrollReservationList extends PayrollReservationList {
 
   factory _$PayrollReservationList(
           [void Function(PayrollReservationListBuilder)? updates]) =>
-      (new PayrollReservationListBuilder()..update(updates)).build();
+      (new PayrollReservationListBuilder()..update(updates))._build();
 
   _$PayrollReservationList._(
       {required this.agent,
@@ -36,19 +36,19 @@ class _$PayrollReservationList extends PayrollReservationList {
       required this.guestPaymentDate})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        agent, 'PayrollReservationList', 'agent');
+        agent, r'PayrollReservationList', 'agent');
     BuiltValueNullFieldError.checkNotNull(
-        owner, 'PayrollReservationList', 'owner');
+        owner, r'PayrollReservationList', 'owner');
     BuiltValueNullFieldError.checkNotNull(
-        guest, 'PayrollReservationList', 'guest');
+        guest, r'PayrollReservationList', 'guest');
     BuiltValueNullFieldError.checkNotNull(
-        ownerRate, 'PayrollReservationList', 'ownerRate');
+        ownerRate, r'PayrollReservationList', 'ownerRate');
     BuiltValueNullFieldError.checkNotNull(
-        guestRate, 'PayrollReservationList', 'guestRate');
+        guestRate, r'PayrollReservationList', 'guestRate');
     BuiltValueNullFieldError.checkNotNull(
-        spread, 'PayrollReservationList', 'spread');
+        spread, r'PayrollReservationList', 'spread');
     BuiltValueNullFieldError.checkNotNull(
-        guestPaymentDate, 'PayrollReservationList', 'guestPaymentDate');
+        guestPaymentDate, r'PayrollReservationList', 'guestPaymentDate');
   }
 
   @override
@@ -89,7 +89,7 @@ class _$PayrollReservationList extends PayrollReservationList {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('PayrollReservationList')
+    return (newBuiltValueToStringHelper(r'PayrollReservationList')
           ..add('agent', agent)
           ..add('owner', owner)
           ..add('guest', guest)
@@ -131,8 +131,8 @@ class PayrollReservationListBuilder
 
   DateTime? _guestPaymentDate;
   DateTime? get guestPaymentDate => _$this._guestPaymentDate;
-  set guestPaymentDate(DateTime? guestPaymentDate) => _$this._guestPaymentDate = guestPaymentDate;
-
+  set guestPaymentDate(DateTime? guestPaymentDate) =>
+      _$this._guestPaymentDate = guestPaymentDate;
 
   PayrollReservationListBuilder();
 
@@ -163,26 +163,30 @@ class PayrollReservationListBuilder
   }
 
   @override
-  _$PayrollReservationList build() {
+  PayrollReservationList build() => _build();
+
+  _$PayrollReservationList _build() {
     final _$result = _$v ??
         new _$PayrollReservationList._(
             agent: BuiltValueNullFieldError.checkNotNull(
-                agent, 'BillingInvoice', 'agent'),
+                agent, r'PayrollReservationList', 'agent'),
             owner: BuiltValueNullFieldError.checkNotNull(
-                owner, 'BillingInvoice', 'owner'),
+                owner, r'PayrollReservationList', 'owner'),
             guest: BuiltValueNullFieldError.checkNotNull(
-                guest, 'BillingInvoice', 'guest'),
+                guest, r'PayrollReservationList', 'guest'),
             ownerRate: BuiltValueNullFieldError.checkNotNull(
-                ownerRate, 'BillingInvoice', 'ownerRate'),
+                ownerRate, r'PayrollReservationList', 'ownerRate'),
             guestRate: BuiltValueNullFieldError.checkNotNull(
-                guestRate, 'BillingInvoice', 'guestRate'),
+                guestRate, r'PayrollReservationList', 'guestRate'),
             spread: BuiltValueNullFieldError.checkNotNull(
-                spread, 'BillingInvoice', 'spread'),
+                spread, r'PayrollReservationList', 'spread'),
             guestPaymentDate: BuiltValueNullFieldError.checkNotNull(
-                guestPaymentDate, 'BillingInvoice', 'guestPaymentDate'));
+                guestPaymentDate,
+                r'PayrollReservationList',
+                'guestPaymentDate'));
     replace(_$result);
     return _$result;
   }
 }
 
-// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas

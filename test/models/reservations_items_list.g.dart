@@ -19,31 +19,31 @@ class _$ReservationItemsList extends ReservationItemsList {
   final String createdAt;
 
   factory _$ReservationItemsList(
-      [void Function(ReservationItemsListBuilder)? updates]) =>
-      (new ReservationItemsListBuilder()..update(updates)).build();
+          [void Function(ReservationItemsListBuilder)? updates]) =>
+      (new ReservationItemsListBuilder()..update(updates))._build();
 
   _$ReservationItemsList._(
       {required this.property,
-        required this.agent,
-        required this.owner,
-        required this.guest,
-        required this.createdAt})
+      required this.agent,
+      required this.owner,
+      required this.guest,
+      required this.createdAt})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        property, 'ReservationItemsList', 'property');
+        property, r'ReservationItemsList', 'property');
     BuiltValueNullFieldError.checkNotNull(
-        agent, 'ReservationItemsList', 'agent');
+        agent, r'ReservationItemsList', 'agent');
     BuiltValueNullFieldError.checkNotNull(
-        owner, 'ReservationItemsList', 'owner');
+        owner, r'ReservationItemsList', 'owner');
     BuiltValueNullFieldError.checkNotNull(
-        guest, 'ReservationItemsList', 'guest');
+        guest, r'ReservationItemsList', 'guest');
     BuiltValueNullFieldError.checkNotNull(
-        createdAt, 'ReservationItemsList', 'createdAt');
+        createdAt, r'ReservationItemsList', 'createdAt');
   }
 
   @override
   ReservationItemsList rebuild(
-      void Function(ReservationItemsListBuilder) updates) =>
+          void Function(ReservationItemsListBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
@@ -64,21 +64,19 @@ class _$ReservationItemsList extends ReservationItemsList {
   @override
   int get hashCode {
     return $jf($jc(
-        $jc(
-            $jc($jc($jc(0, property.hashCode), agent.hashCode),
-                owner.hashCode),
+        $jc($jc($jc($jc(0, property.hashCode), agent.hashCode), owner.hashCode),
             guest.hashCode),
         createdAt.hashCode));
   }
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('ReservationItemsList')
-      ..add('property', property)
-      ..add('destination', agent)
-      ..add('country', owner)
-      ..add('region', guest)
-      ..add('agents', createdAt))
+    return (newBuiltValueToStringHelper(r'ReservationItemsList')
+          ..add('property', property)
+          ..add('agent', agent)
+          ..add('owner', owner)
+          ..add('guest', guest)
+          ..add('createdAt', createdAt))
         .toString();
   }
 }
@@ -134,22 +132,24 @@ class ReservationItemsListBuilder
   }
 
   @override
-  _$ReservationItemsList build() {
+  ReservationItemsList build() => _build();
+
+  _$ReservationItemsList _build() {
     final _$result = _$v ??
         new _$ReservationItemsList._(
             property: BuiltValueNullFieldError.checkNotNull(
-                property, 'BillingInvoice', 'property'),
+                property, r'ReservationItemsList', 'property'),
             agent: BuiltValueNullFieldError.checkNotNull(
-                agent, 'BillingInvoice', 'agent'),
+                agent, r'ReservationItemsList', 'agent'),
             owner: BuiltValueNullFieldError.checkNotNull(
-                owner, 'BillingInvoice', 'owner'),
+                owner, r'ReservationItemsList', 'owner'),
             guest: BuiltValueNullFieldError.checkNotNull(
-                guest, 'BillingInvoice', 'guest'),
+                guest, r'ReservationItemsList', 'guest'),
             createdAt: BuiltValueNullFieldError.checkNotNull(
-                createdAt, 'BillingInvoice', 'createdAt'));
+                createdAt, r'ReservationItemsList', 'createdAt'));
     replace(_$result);
     return _$result;
   }
 }
 
-// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas

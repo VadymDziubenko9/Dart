@@ -36,7 +36,7 @@ void main() async {
     'Admin should be able to log in to the DashWeek',
         () {
       given('a registered user');
-      var admin = DashPortalUser.vadymDashweekAdmin;
+      var admin = DashPortalUser.vadymDashweekAgent;
 
       when('he opens the dtp-staging log in page');
       var loginPage = dash_login_page.LoginPage().open();
@@ -49,7 +49,7 @@ void main() async {
       expect(dashListPage.loggedInUserName, contains(admin.lastName));
 
       and('admin should be included into the Agent list of users');
-      expect(dashListPage.parseUsers(), contains(DashPortalUser.vadymDashweekAdmin.toListAdmins()));
+      expect(dashListPage.parseUsers(), contains(DashPortalUser.vadymDashweekAgent.toListAdmins()));
     },
   );
 

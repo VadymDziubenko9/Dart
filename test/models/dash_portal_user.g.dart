@@ -1,12 +1,12 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
+part of 'dash_portal_user.dart';
+
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
 
-part of 'dash_portal_user.dart';
-
-class _$ClientPortalUser extends DashPortalUser {
+class _$DashPortalUser extends DashPortalUser {
   @override
   final String role;
   @override
@@ -24,31 +24,32 @@ class _$ClientPortalUser extends DashPortalUser {
   @override
   final bool emailNotification;
 
-  factory _$ClientPortalUser(
-      [void Function(DashPortalUserBuilder)? updates]) =>
-      (new DashPortalUserBuilder()..update(updates)).build();
+  factory _$DashPortalUser([void Function(DashPortalUserBuilder)? updates]) =>
+      (new DashPortalUserBuilder()..update(updates))._build();
 
-  _$ClientPortalUser._(
+  _$DashPortalUser._(
       {required this.role,
-        required this.email,
-        required this.password,
-        required this.firstName,
-        required this.lastName,
-        required this.phone,
-        required this.smsNotification,
-        required this.emailNotification})
+      required this.email,
+      required this.password,
+      required this.firstName,
+      required this.lastName,
+      required this.phone,
+      required this.smsNotification,
+      required this.emailNotification})
       : super._() {
-    BuiltValueNullFieldError.checkNotNull(role, 'DashPortalUser', 'role');
-    BuiltValueNullFieldError.checkNotNull(email, 'DashPortalUser', 'email');
+    BuiltValueNullFieldError.checkNotNull(role, r'DashPortalUser', 'role');
+    BuiltValueNullFieldError.checkNotNull(email, r'DashPortalUser', 'email');
     BuiltValueNullFieldError.checkNotNull(
-        password, 'ClientPortalUser', 'password');
-    BuiltValueNullFieldError.checkNotNull(firstName, 'DashPortalUser', 'firstName');
-    BuiltValueNullFieldError.checkNotNull(lastName, 'DashPortalUser', 'lastName');
-    BuiltValueNullFieldError.checkNotNull(phone, 'DashPortalUser', 'phone');
+        password, r'DashPortalUser', 'password');
     BuiltValueNullFieldError.checkNotNull(
-        smsNotification, 'DashPortalUser', 'smsNotification');
+        firstName, r'DashPortalUser', 'firstName');
     BuiltValueNullFieldError.checkNotNull(
-        emailNotification, 'DashPortalUser', 'emailNotification');
+        lastName, r'DashPortalUser', 'lastName');
+    BuiltValueNullFieldError.checkNotNull(phone, r'DashPortalUser', 'phone');
+    BuiltValueNullFieldError.checkNotNull(
+        smsNotification, r'DashPortalUser', 'smsNotification');
+    BuiltValueNullFieldError.checkNotNull(
+        emailNotification, r'DashPortalUser', 'emailNotification');
   }
 
   @override
@@ -75,14 +76,15 @@ class _$ClientPortalUser extends DashPortalUser {
 
   @override
   int get hashCode {
-    return $jf($jc($jc(
+    return $jf($jc(
         $jc(
             $jc(
                 $jc(
-                    $jc($jc($jc(0, role.hashCode), email.hashCode),
-                        password.hashCode),
-                    firstName.hashCode),
-                lastName.hashCode),
+                    $jc(
+                        $jc($jc($jc(0, role.hashCode), email.hashCode),
+                            password.hashCode),
+                        firstName.hashCode),
+                    lastName.hashCode),
                 phone.hashCode),
             smsNotification.hashCode),
         emailNotification.hashCode));
@@ -90,22 +92,22 @@ class _$ClientPortalUser extends DashPortalUser {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('DashPortalUser')
-      ..add('role', role)
-      ..add('email', email)
-      ..add('password', password)
-      ..add('firstName', firstName)
-      ..add('lastName', lastName)
-      ..add('phone', phone)
-      ..add('smsNotification', smsNotification)
-      ..add('emailNotification', emailNotification))
+    return (newBuiltValueToStringHelper(r'DashPortalUser')
+          ..add('role', role)
+          ..add('email', email)
+          ..add('password', password)
+          ..add('firstName', firstName)
+          ..add('lastName', lastName)
+          ..add('phone', phone)
+          ..add('smsNotification', smsNotification)
+          ..add('emailNotification', emailNotification))
         .toString();
   }
 }
 
 class DashPortalUserBuilder
     implements Builder<DashPortalUser, DashPortalUserBuilder> {
-  _$ClientPortalUser? _$v;
+  _$DashPortalUser? _$v;
 
   String? _role;
   String? get role => _$this._role;
@@ -162,7 +164,7 @@ class DashPortalUserBuilder
   @override
   void replace(DashPortalUser other) {
     ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$ClientPortalUser;
+    _$v = other as _$DashPortalUser;
   }
 
   @override
@@ -171,28 +173,30 @@ class DashPortalUserBuilder
   }
 
   @override
-  _$ClientPortalUser build() {
+  DashPortalUser build() => _build();
+
+  _$DashPortalUser _build() {
     final _$result = _$v ??
-        new _$ClientPortalUser._(
+        new _$DashPortalUser._(
             role: BuiltValueNullFieldError.checkNotNull(
-                role, 'DashPortalUser', 'role'),
+                role, r'DashPortalUser', 'role'),
             email: BuiltValueNullFieldError.checkNotNull(
-                email, 'DashPortalUser', 'email'),
+                email, r'DashPortalUser', 'email'),
             password: BuiltValueNullFieldError.checkNotNull(
-                password, 'DashPortalUser', 'password'),
+                password, r'DashPortalUser', 'password'),
             firstName: BuiltValueNullFieldError.checkNotNull(
-                firstName, 'DashPortalUser', 'firstName'),
+                firstName, r'DashPortalUser', 'firstName'),
             lastName: BuiltValueNullFieldError.checkNotNull(
-                lastName, 'DashPortalUser', 'lastName'),
+                lastName, r'DashPortalUser', 'lastName'),
             phone: BuiltValueNullFieldError.checkNotNull(
-                phone, 'DashPortalUser', 'phone'),
+                phone, r'DashPortalUser', 'phone'),
             smsNotification: BuiltValueNullFieldError.checkNotNull(
-                smsNotification, 'DashPortalUser', 'smsNotification'),
+                smsNotification, r'DashPortalUser', 'smsNotification'),
             emailNotification: BuiltValueNullFieldError.checkNotNull(
-                emailNotification, 'DashPortalUser', 'emailNotification'));
+                emailNotification, r'DashPortalUser', 'emailNotification'));
     replace(_$result);
     return _$result;
   }
 }
 
-// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas

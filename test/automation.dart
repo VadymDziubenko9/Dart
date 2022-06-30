@@ -790,13 +790,13 @@ class TelInput extends Input {
 
   @override
   String? get value => super
-      .value
-      ?.replaceAll('-', '')
-      .replaceAll(' ', '')
-      .replaceAll('(', '')
-      .replaceAll(')', '')
-      .replaceAll('+', '')
-      .trim();
+      .value;
+      // ?.replaceAll('-', '')
+      // .replaceAll(' ', '')
+      // .replaceAll('(', '')
+      // .replaceAll(')', '')
+      // .replaceAll('+', '')
+      // .trim();
 
   @override
   void clearSlowly() {

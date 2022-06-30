@@ -10,26 +10,28 @@ class _$ResrvationsRequestItemsList extends ResrvationsRequestItemsList {
   @override
   final String property;
   @override
-  final String agents;
-  @override
   final String guest;
+  @override
+  final String agents;
 
   factory _$ResrvationsRequestItemsList(
           [void Function(ResrvationsRequestItemsListBuilder)? updates]) =>
-      (new ResrvationsRequestItemsListBuilder()..update(updates)).build();
+      (new ResrvationsRequestItemsListBuilder()..update(updates))._build();
 
   _$ResrvationsRequestItemsList._(
-      {required this.property, required this.agents, required this.guest})
+      {required this.property, required this.guest, required this.agents})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        property, 'ResrvationsRequestItemsList', 'property');
+        property, r'ResrvationsRequestItemsList', 'property');
     BuiltValueNullFieldError.checkNotNull(
-        agents, 'ResrvationsRequestItemsList', 'agents');
-    BuiltValueNullFieldError.checkNotNull(guest, 'ResrvationsRequestItemsList', 'guest');
+        guest, r'ResrvationsRequestItemsList', 'guest');
+    BuiltValueNullFieldError.checkNotNull(
+        agents, r'ResrvationsRequestItemsList', 'agents');
   }
 
   @override
-  ResrvationsRequestItemsList rebuild(void Function(ResrvationsRequestItemsListBuilder) updates) =>
+  ResrvationsRequestItemsList rebuild(
+          void Function(ResrvationsRequestItemsListBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
@@ -53,7 +55,7 @@ class _$ResrvationsRequestItemsList extends ResrvationsRequestItemsList {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('ResrvationsRequestItemsList')
+    return (newBuiltValueToStringHelper(r'ResrvationsRequestItemsList')
           ..add('property', property)
           ..add('guest', guest)
           ..add('agents', agents))
@@ -62,7 +64,9 @@ class _$ResrvationsRequestItemsList extends ResrvationsRequestItemsList {
 }
 
 class ResrvationsRequestItemsListBuilder
-    implements Builder<ResrvationsRequestItemsList, ResrvationsRequestItemsListBuilder> {
+    implements
+        Builder<ResrvationsRequestItemsList,
+            ResrvationsRequestItemsListBuilder> {
   _$ResrvationsRequestItemsList? _$v;
 
   String? _property;
@@ -102,18 +106,20 @@ class ResrvationsRequestItemsListBuilder
   }
 
   @override
-  _$ResrvationsRequestItemsList build() {
+  ResrvationsRequestItemsList build() => _build();
+
+  _$ResrvationsRequestItemsList _build() {
     final _$result = _$v ??
         new _$ResrvationsRequestItemsList._(
             property: BuiltValueNullFieldError.checkNotNull(
-                property, 'ResrvationsRequestItemsList', 'property'),
+                property, r'ResrvationsRequestItemsList', 'property'),
             guest: BuiltValueNullFieldError.checkNotNull(
-                guest, 'ResrvationsRequestItemsList', 'guest'),
+                guest, r'ResrvationsRequestItemsList', 'guest'),
             agents: BuiltValueNullFieldError.checkNotNull(
-                agents, 'ResrvationsRequestItemsList', 'guestRate'));
+                agents, r'ResrvationsRequestItemsList', 'agents'));
     replace(_$result);
     return _$result;
   }
 }
 
-// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas
