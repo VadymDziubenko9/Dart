@@ -38,11 +38,11 @@ void main() async {
       given('a registered user');
       var admin = DashPortalUser.vadymDashweekAgent;
 
-      when('he opens the dtp-staging log in page');
+      when('he opens the Dashweek log in page');
       var loginPage = dash_login_page.LoginPage().open();
 
       then('he should be able to log in there');
-      and('the admin user should be navigated to the Dashboard page');
+      and('the admin user should be navigated to the Agent page');
       var dashListPage = loginPage.loginUser(admin);
 
       and('the company`s name should be shown in the page header');
