@@ -8,7 +8,7 @@ import 'logged_in_page.dart';
 
 
 class LoginPage extends Automation {
-  static const pageURL = 'https://admin-qa.dashweek.com/sign-in';
+  static const pageURL = 'https://*/sign-in';
 
   void waitTillPageLoaded() {
     waitUntilVisibleByXpath("//input[@name='email']");
