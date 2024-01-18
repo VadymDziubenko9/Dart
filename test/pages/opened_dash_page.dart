@@ -3,7 +3,7 @@ import 'dash_page.dart';
 
 class OpenCasesPage extends CasesPage {
   static final String pageURL =
-      'https://cases-qa.casechronology.com/admin/litigation-cases';
+      'https://*/admin/litigation-cases';
 
   static OpenCasesPage open() {
     Automation.driver.get(pageURL);
