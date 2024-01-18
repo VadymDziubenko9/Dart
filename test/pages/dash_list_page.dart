@@ -7,7 +7,7 @@ import '../models/dash_portal_user_list_item.dart';
 import 'logged_in_page.dart';
 
 class DashListPage extends LoggedInPage{
-  static final String pageURL = 'https://admin-qa.dashweek.com/admin/agents';
+  static final String pageURL = 'https://*/agents';
 
   static DashListPage open() {
     Automation.driver.get(pageURL);
