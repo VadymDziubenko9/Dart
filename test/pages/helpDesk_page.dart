@@ -6,7 +6,7 @@ import '../automation.dart';
 import 'logged_in_page.dart';
 
 class HelpDescPage extends LoggedInPage {
-  static final String pageURL = 'https://admin-qa.dashweek.com/admin/helpdesk';
+  static final String pageURL = 'https://*/helpdesk';
 
   static HelpDescPage open() {
     Automation.driver.get(pageURL);
