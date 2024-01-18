@@ -5,7 +5,7 @@ import '../models/properties_items_list.dart';
 import 'logged_in_page.dart';
 
 class PropertiesPage extends LoggedInPage {
-  static final String pageURL = 'https://admin-qa.dashweek.com/admin/properties';
+  static final String pageURL = 'https://*/properties';
 
   static PropertiesPage open() {
     Automation.driver.get(pageURL);
