@@ -3,7 +3,7 @@ import '../automation.dart';
 import 'logged_in_page.dart';
 
 class DashMessagesPage extends LoggedInPage {
-  static final String pageURL = 'https://admin-qa.dashweek.com/admin/messages';
+  static final String pageURL = 'https://*/admin/messages';
 
   static DashMessagesPage open() {
     Automation.driver.get(pageURL);
