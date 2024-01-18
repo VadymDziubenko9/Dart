@@ -64,9 +64,9 @@ abstract class DashPortalUser implements Built<DashPortalUser, DashPortalUserBui
       ..role = 'Admin'
       ..firstName = 'Vadym'
       ..lastName = 'Dziubenko'
-      ..email = 'vadymdziubenko99@gmail.com'
-      ..password = 'Ps@!2009'
-      ..phone = '+380 (63) 997 97 79'
+      ..email = '*'
+      ..password = '*'
+      ..phone = '*'
       ..smsNotification = true
       ..emailNotification = true,
   );
@@ -76,9 +76,9 @@ abstract class DashPortalUser implements Built<DashPortalUser, DashPortalUserBui
       ..role = 'Admin'
       ..firstName = 'Vadym'
       ..lastName = 'Dziubenko'
-      ..email = 'vadymdziubenko99@gmail.com'
-      ..password = 'Ps@!2009'
-      ..phone = '+38 (063) 997-9779'
+      ..email = '*'
+      ..password = '*'
+      ..phone = '*'
       ..smsNotification = true
       ..emailNotification = true,
   );
@@ -88,9 +88,9 @@ abstract class DashPortalUser implements Built<DashPortalUser, DashPortalUserBui
       ..role = 'Owner'
       ..firstName = 'Vadym'
       ..lastName = 'Dziubenko'
-      ..email = 'vadymdziubenko99+zack@gmail.com'
-      ..password = 'Ps@!2009'
-      ..phone = '+380 (639) 979-779'
+      ..email = '*'
+      ..password = '*'
+      ..phone = '*'
       ..smsNotification = true
       ..emailNotification = true,
   );
@@ -100,9 +100,9 @@ abstract class DashPortalUser implements Built<DashPortalUser, DashPortalUserBui
       ..role = 'Guest'
       ..firstName = 'QA'
       ..lastName = 'Guest'
-      ..email = 'vadymdziubenko99+dash@gmail.com'
-      ..password = 'Ps@!2009'
-      ..phone = '+38 (063) 997-9779'
+      ..email = '*'
+      ..password = '*'
+      ..phone = '*'
       ..smsNotification = true
       ..emailNotification = true,
   );
