@@ -6,7 +6,7 @@ import '../models/dash_portal_user.dart';
 import 'logged_in_page.dart';
 
 class ProfilePage extends LoggedInPage {
-  static String pageURL = 'https://clients-qa.casechronology.com/profile';
+  static String pageURL = 'https:/*/profile';
 
   static ProfilePage open() {
     Automation.driver.get(pageURL);
