@@ -6,8 +6,7 @@ import '../models/reservation_request_items_list.dart';
 import 'logged_in_page.dart';
 
 class ReservationRequestsPage extends LoggedInPage {
-  static final String pageURL =
-      'https://admin-qa.dashweek.com/admin/reservation/requests';
+  static final String pageURL = 'https:/*/reservation/requests';
 
   static ReservationRequestsPage open() {
     Automation.driver.get(pageURL);
