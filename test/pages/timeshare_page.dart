@@ -7,7 +7,7 @@ import 'logged_in_page.dart';
 
 class TimesharePage extends LoggedInPage {
   static final String pageURL =
-      'https://admin-qa.dashweek.com/admin/timeshares';
+      'https://*/timeshares';
 
   static TimesharePage open() {
     Automation.driver.get(pageURL);
