@@ -10,7 +10,7 @@ import '../utils.dart';
 import 'logged_in_page.dart';
 
 class PayrollPage extends LoggedInPage {
-  static final String pageURL = 'https://admin-qa.dashweek.com/admin/payroll';
+  static final String pageURL = 'https://*/payroll';
 
   static PayrollPage open() {
     Automation.driver.get(pageURL);
