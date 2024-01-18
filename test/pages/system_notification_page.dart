@@ -3,7 +3,7 @@ import '../automation.dart';
 import 'logged_in_page.dart';
 
 class SystemNotificationsPage extends LoggedInPage {
-  static final String pageURL = 'https://admin-qa.dashweek.com/admin/system-notifications';
+  static final String pageURL = 'https://*system-notifications';
 
   static SystemNotificationsPage open() {
     Automation.driver.get(pageURL);
