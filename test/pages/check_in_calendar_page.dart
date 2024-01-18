@@ -3,7 +3,7 @@ import '../automation.dart';
 import 'logged_in_page.dart';
 
 class CheckInCalendarPage extends LoggedInPage {
-  static final String pageURL = 'https://admin-qa.dashweek.com/admin/calendar';
+  static final String pageURL = 'https://*/calendar';
 
   static CheckInCalendarPage open() {
     Automation.driver.get(pageURL);
